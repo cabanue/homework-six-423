@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework 6</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav>
+      <div>Music</div>
+      <div id="login">Login</div>
+      <div id="logout" onclick="logout()">Logout</div>
+    </nav>
+    <div class="home">
+      <h1 id="home-title">Albums</h1>
+      <div class="buttons">
+        <div id="all" class="button">All Albums</div>
+        <div id="Pop" class="button">Pop</div>
+        <div id="Alternative" class="button">Alternative</div>
+        <div id="Soundtrack" class="button">Soundtrack</div>
+      </div>
+      <div id="albums"></div>
+    </div>
+
+    <div class="modal">
+      <div class="click"></div>
+      <div class="form">
+        <div class="column">
+          <p>Login with Email or Google</p>
+          <input type="text" id="login-email" placeholder="Email">
+          <input type="text" id="login-password" placeholder="Password">
+          <div class="login-but" onclick="signInEmail()">Login</div>
+          <p>or</p>
+          <div class="login-but" onclick="signInGoogle()">Google</div>
+        </div>
+        <div class="column">
+          <p>Sign Up</p>
+          <input type="text" id="fname" placeholder="First Name">
+          <input type="text" id="lname" placeholder="Last Name">
+          <input type="text" id="signup-email" placeholder="Email">
+          <input type="text" id="signup-password" placeholder="Password">
+          <div class="login-but" onclick="signUp();">Sign Up</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.2.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.2.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="app/app.js"></script>
+
+  </body>
+</html>
